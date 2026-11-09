@@ -14,6 +14,7 @@ Código da Estação:15630000
 
 
 EstacaoCodigo;NivelConsistencia;Data;Hora;NumMedicao;Cota;Vazao;AreaMolhada;Largura;VelMedia;Profundidade;tecnico;medidorvazao
+15630000;1;25/07/2026;01/01/1900 08:49;1;"1356,0";"11900,0";"12771,1";"1051,2";"0,935";"12,91";João Bosco Alfenas;4
 15630000;1;25/04/2026;01/01/1900 09:06;1;"2284,0";"42800,0";"22582,6";"1132,2";"1,9";"19,9";João Bosco Alfenas;4
 15630000;1;30/01/2026;01/01/1900 08:41;1;"2114,0";"32900,0";"20160,9";"1111,7";"1,63";"18,1";João Bosco Alfenas;4
 15630000;1;30/07/2025;01/01/1900 09:02;1;"1389,0";"12900,0";"12545,53";"1056,75";"1,03";"11,9";João Bosco Alfenas;4

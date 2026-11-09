@@ -1,0 +1,28 @@
+{
+  "order": [
+    1,
+    0,
+    1
+  ],
+  "seasonal_order": [
+    0,
+    1,
+    0,
+    365
+  ],
+  "device": "cpu",
+  "trend": "none",
+  "scale": 182.1744955074102,
+  "parameters": [
+    0.9965410199244886,
+    0.6811076101535736,
+    0.002235001205368532
+  ],
+  "converged": true,
+  "optimization_attempts": [
+    {
+      "optimizer": "lbfgs",
+      "converged": true
+    }
+  ]
+}

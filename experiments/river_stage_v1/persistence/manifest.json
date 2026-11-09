@@ -1,0 +1,116 @@
+{
+  "status": "complete",
+  "model": "persistence",
+  "protocol_id": "446771a53ed1f1f07a860de5ed4d946132359f7704b8955c2561231d5017bea9",
+  "protocol": {
+    "data_start": "1991-01-01",
+    "train_end": "2015-12-31",
+    "validation_end": "2020-12-31",
+    "test_end": "2023-12-31",
+    "horizons": [
+      7,
+      15,
+      30,
+      60,
+      90
+    ],
+    "max_horizon": 90,
+    "origin_step_days": 7,
+    "stations": {
+      "humaita": "15630000",
+      "manicore": "15700000",
+      "porto_velho": "15400000"
+    },
+    "lstm_seeds": [
+      17,
+      42,
+      123
+    ],
+    "input_sha256": {
+      "raw_humaita": "ecf979aa6b37efa6d677abadecdf46b7dc3c7945cd266b33f3efe9e5caec926a",
+      "humaita": "299b9e8c1433c2bd1d9c5f6f66e0e07859294c72cb0e2200d8f7e67a851ade2c",
+      "raw_manicore": "e9ce75d4e3c09b067104203baba13aa16958a21114fd2c37c933a330ecabab48",
+      "manicore": "8d9197e51faa210407f6d6e7d2b3b0d3123c122bfe51706a5f65a3d31e837b92",
+      "raw_porto_velho": "68d01d623f1697ce9220e38c70b44814323b137acfc0c0f6fdc6afe10c0d5173",
+      "porto_velho": "39cdddb4ff52aac0333dc344d63239f6d5dabf11a40af8531c10df57f0fe3ac3"
+    },
+    "observed_evaluation_verified": true,
+    "selection": "mean validation MAE over selected horizons and seeds",
+    "test_update": "new observations allowed; fitted parameters frozen",
+    "common_code_sha256": "cf13721cd3cd1770db8e5ffcfd3ee5d79ce2081fb39caba5ac59635cab0dd8e4"
+  },
+  "environment": {
+    "python": "3.14.5 (v3.14.5:5607950ef23, May 10 2026, 07:38:09) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "packages": {
+      "numpy": "2.4.6",
+      "pandas": "3.0.3",
+      "statsmodels": "0.15.0",
+      "torch": "2.12.0",
+      "timesfm": "3.0.2",
+      "huggingface-hub": "1.31.0"
+    }
+  },
+  "seeds": [
+    0
+  ],
+  "candidates": [
+    {}
+  ],
+  "model_settings": {},
+  "model_code_sha256": "1bd476e5db7f4d2de627d7054fdec7635cdcc3973d798f61f4703b4a81580001",
+  "selected": {
+    "humaita": {
+      "configuration": {},
+      "validation_mae": 263.96867469879516,
+      "validation_models": {
+        "0": {
+          "method": "last observed value",
+          "device": "cpu"
+        }
+      },
+      "test_models": {
+        "0": {
+          "method": "last observed value",
+          "device": "cpu"
+        }
+      }
+    },
+    "manicore": {
+      "configuration": {},
+      "validation_mae": 271.9871485943775,
+      "validation_models": {
+        "0": {
+          "method": "last observed value",
+          "device": "cpu"
+        }
+      },
+      "test_models": {
+        "0": {
+          "method": "last observed value",
+          "device": "cpu"
+        }
+      }
+    },
+    "porto_velho": {
+      "configuration": {},
+      "validation_mae": 276.76867469879517,
+      "validation_models": {
+        "0": {
+          "method": "last observed value",
+          "device": "cpu"
+        }
+      },
+      "test_models": {
+        "0": {
+          "method": "last observed value",
+          "device": "cpu"
+        }
+      }
+    }
+  },
+  "started_utc": "2026-11-09T22:05:30.273569+00:00",
+  "finished_utc": "2026-11-09T22:05:30.473077+00:00",
+  "predictions_sha256": "1053b7ad3a802d041d3be214868a27f47dad4132e722001e7fcb658af901c9fb"
+}

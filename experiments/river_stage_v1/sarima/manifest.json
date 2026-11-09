@@ -1,0 +1,326 @@
+{
+  "status": "complete",
+  "model": "sarima",
+  "protocol_id": "446771a53ed1f1f07a860de5ed4d946132359f7704b8955c2561231d5017bea9",
+  "protocol": {
+    "data_start": "1991-01-01",
+    "train_end": "2015-12-31",
+    "validation_end": "2020-12-31",
+    "test_end": "2023-12-31",
+    "horizons": [
+      7,
+      15,
+      30,
+      60,
+      90
+    ],
+    "max_horizon": 90,
+    "origin_step_days": 7,
+    "stations": {
+      "humaita": "15630000",
+      "manicore": "15700000",
+      "porto_velho": "15400000"
+    },
+    "lstm_seeds": [
+      17,
+      42,
+      123
+    ],
+    "input_sha256": {
+      "raw_humaita": "ecf979aa6b37efa6d677abadecdf46b7dc3c7945cd266b33f3efe9e5caec926a",
+      "humaita": "299b9e8c1433c2bd1d9c5f6f66e0e07859294c72cb0e2200d8f7e67a851ade2c",
+      "raw_manicore": "e9ce75d4e3c09b067104203baba13aa16958a21114fd2c37c933a330ecabab48",
+      "manicore": "8d9197e51faa210407f6d6e7d2b3b0d3123c122bfe51706a5f65a3d31e837b92",
+      "raw_porto_velho": "68d01d623f1697ce9220e38c70b44814323b137acfc0c0f6fdc6afe10c0d5173",
+      "porto_velho": "39cdddb4ff52aac0333dc344d63239f6d5dabf11a40af8531c10df57f0fe3ac3"
+    },
+    "observed_evaluation_verified": true,
+    "selection": "mean validation MAE over selected horizons and seeds",
+    "test_update": "new observations allowed; fitted parameters frozen",
+    "common_code_sha256": "cf13721cd3cd1770db8e5ffcfd3ee5d79ce2081fb39caba5ac59635cab0dd8e4"
+  },
+  "environment": {
+    "python": "3.14.5 (v3.14.5:5607950ef23, May 10 2026, 07:38:09) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "packages": {
+      "numpy": "2.4.6",
+      "pandas": "3.0.3",
+      "statsmodels": "0.15.0",
+      "torch": "2.12.0",
+      "timesfm": "3.0.2",
+      "huggingface-hub": "1.31.0"
+    }
+  },
+  "seeds": [
+    0
+  ],
+  "candidates": [
+    {
+      "order": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "order": [
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "order": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "order": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "order": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "model_settings": {
+    "seasonal_period": 365,
+    "max_iterations": 300,
+    "optimizers": [
+      "lbfgs",
+      "powell"
+    ]
+  },
+  "model_code_sha256": "3b16188d98dc697b2255b29b0680b7c005e1d2cb3c17f49c7a3944d9e94edc2e",
+  "selected": {
+    "humaita": {
+      "configuration": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      },
+      "validation_mae": 98.30923687261937,
+      "validation_models": {
+        "0": {
+          "order": [
+            1,
+            0,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            1,
+            0,
+            365
+          ],
+          "device": "cpu",
+          "trend": "none",
+          "scale": 180.94638502361263,
+          "parameters": [
+            0.9910629475996187,
+            0.7361486055318515,
+            0.004739440457480771
+          ],
+          "converged": true,
+          "optimization_attempts": [
+            {
+              "optimizer": "lbfgs",
+              "converged": true
+            }
+          ]
+        }
+      },
+      "test_models": {
+        "0": {
+          "order": [
+            1,
+            0,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            1,
+            0,
+            365
+          ],
+          "device": "cpu",
+          "trend": "none",
+          "scale": 188.83687679138285,
+          "parameters": [
+            0.9932103912023867,
+            0.7109608020682974,
+            0.004661354538154957
+          ],
+          "converged": true,
+          "optimization_attempts": [
+            {
+              "optimizer": "lbfgs",
+              "converged": true
+            }
+          ]
+        }
+      }
+    },
+    "manicore": {
+      "configuration": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      },
+      "validation_mae": 88.94662887773963,
+      "validation_models": {
+        "0": {
+          "order": [
+            1,
+            0,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            1,
+            0,
+            365
+          ],
+          "device": "cpu",
+          "trend": "none",
+          "scale": 171.90656341871164,
+          "parameters": [
+            0.9961829003963899,
+            0.6793522191652507,
+            0.0025824547348916775
+          ],
+          "converged": true,
+          "optimization_attempts": [
+            {
+              "optimizer": "lbfgs",
+              "converged": true
+            }
+          ]
+        }
+      },
+      "test_models": {
+        "0": {
+          "order": [
+            1,
+            0,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            1,
+            0,
+            365
+          ],
+          "device": "cpu",
+          "trend": "none",
+          "scale": 182.1744955074102,
+          "parameters": [
+            0.9965410199244886,
+            0.6811076101535736,
+            0.002235001205368532
+          ],
+          "converged": true,
+          "optimization_attempts": [
+            {
+              "optimizer": "lbfgs",
+              "converged": true
+            }
+          ]
+        }
+      }
+    },
+    "porto_velho": {
+      "configuration": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      },
+      "validation_mae": 118.00311860970528,
+      "validation_models": {
+        "0": {
+          "order": [
+            1,
+            0,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            1,
+            0,
+            365
+          ],
+          "device": "cpu",
+          "trend": "none",
+          "scale": 192.02228791515793,
+          "parameters": [
+            0.9863975871368131,
+            0.45573431863708713,
+            0.012996190379477055
+          ],
+          "converged": true,
+          "optimization_attempts": [
+            {
+              "optimizer": "lbfgs",
+              "converged": true
+            }
+          ]
+        }
+      },
+      "test_models": {
+        "0": {
+          "order": [
+            1,
+            0,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            1,
+            0,
+            365
+          ],
+          "device": "cpu",
+          "trend": "none",
+          "scale": 202.38252545915856,
+          "parameters": [
+            0.9865438991507078,
+            0.41202425650121627,
+            0.01359864568746838
+          ],
+          "converged": true,
+          "optimization_attempts": [
+            {
+              "optimizer": "lbfgs",
+              "converged": true
+            }
+          ]
+        }
+      }
+    }
+  },
+  "started_utc": "2026-11-09T22:07:38.479689+00:00",
+  "finished_utc": "2026-11-09T22:07:45.968552+00:00",
+  "predictions_sha256": "75b5e822806a650db0416d738c36531d36645294d55244ed172d54d3579906ab"
+}
